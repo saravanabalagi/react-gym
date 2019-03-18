@@ -99,7 +99,9 @@ class App extends Component {
       <div className="app">
         <header className="app-header">
 
-          <div className='ui'>
+          <h1 className="h1" onClick={()=>{window.open("https://github.com/saravanabalagi/react-gym", "_blank")}}>React Gym</h1>
+
+          <div className="ui">
             <div className="row">
               <span>Server IP</span>
               <input type="text" value={serverIp} onChange={this.handleServerChange} />

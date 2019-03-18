@@ -1,3 +1,5 @@
 # React Gym
 
-Will soon add some description here
+Starter project for using OpenAI Gym in React
+
+![Screencast](public/screencast.gif)
