@@ -99,52 +99,54 @@ class App extends Component {
       <div className="app">
         <header className="app-header">
 
-          <div className="row">
-            <span>Server IP</span>
-            <input type="text" value={serverIp} onChange={this.handleServerChange} />
-            { !client && <button onClick={this.handleCreateClient}>Connect Client</button> }
-            { client && !instanceIdPresent && <button onClick={this.handleCloseClient}>Close Client</button> }
-          </div>
-          <div className="row">
-            <span>Env ID</span>
-            <input type="text" value={envId} onChange={this.handleEnvChange} />
-            { client && !instanceIdPresent && <button onClick={this.handleCreateEnv}>Create Game</button>}
-            { client && instanceIdPresent && !agent && <button onClick={this.handleCloseEnv}>Close Game</button>}
-          </div>
-          <div className="row">
-            <span>Instance ID</span>
-            <input type="text" disabled value={instanceId} />
-            { client && instanceIdPresent && !agent && <button onClick={this.handleCreateAgent}>Create Random Agent</button> }
-            { client && instanceIdPresent && agent && !monitoring && <button onClick={this.handleCloseAgent}>Delete Agent</button> }
-          </div>
-          <div className="row">
-            <span>Out Dir</span>
-            <input type="text" disabled value={outDir} />
-            { client && agent && instanceIdPresent && !monitoring &&
-                <button onClick={this.handleStartMonitoring}>Start Monitoring</button> }
-            { client && agent && instanceIdPresent && monitoring &&
-                <button onClick={this.handleCloseMonitoring}>Close Monitoring</button> }
-          </div>
+          <div className='ui'>
+            <div className="row">
+              <span>Server IP</span>
+              <input type="text" value={serverIp} onChange={this.handleServerChange} />
+              { !client && <button onClick={this.handleCreateClient}>Connect Client</button> }
+              { client && !instanceIdPresent && <button onClick={this.handleCloseClient}>Close Client</button> }
+            </div>
+            <div className="row">
+              <span>Env ID</span>
+              <input type="text" value={envId} onChange={this.handleEnvChange} />
+              { client && !instanceIdPresent && <button onClick={this.handleCreateEnv}>Create Game</button>}
+              { client && instanceIdPresent && !agent && <button onClick={this.handleCloseEnv}>Close Game</button>}
+            </div>
+            <div className="row">
+              <span>Instance ID</span>
+              <input type="text" disabled value={instanceId} />
+              { client && instanceIdPresent && !agent && <button onClick={this.handleCreateAgent}>Create Agent</button> }
+              { client && instanceIdPresent && agent && !monitoring && <button onClick={this.handleCloseAgent}>Delete Agent</button> }
+            </div>
+            <div className="row">
+              <span>Out Dir</span>
+              <input type="text" disabled value={outDir} />
+              { client && agent && instanceIdPresent && !monitoring &&
+                  <button onClick={this.handleStartMonitoring}>Start Monitoring</button> }
+              { client && agent && instanceIdPresent && monitoring &&
+                  <button onClick={this.handleCloseMonitoring}>Close Monitoring</button> }
+            </div>
 
-          <div className="row">
-            <span>Step</span>
-            <input type="text" disabled value={step} />
-            { client && agent && instanceIdPresent && monitoring && !ended &&
-                <button onClick={this.handleActStep}>Play Step</button> }
-          </div>
+            <div className="row">
+              <span>Step</span>
+              <input type="text" disabled value={step} />
+              { client && agent && instanceIdPresent && monitoring && !ended &&
+                  <button onClick={this.handleActStep}>Play Step</button> }
+            </div>
 
-          <div className="row">
-            <span>Episode</span>
-            <input type="text" disabled value={episode} />
-            { client && agent && instanceIdPresent && monitoring && !ended &&
-                <button onClick={this.handleActEpisode}>Play Game</button> }
-          </div>
+            <div className="row">
+              <span>Episode</span>
+              <input type="text" disabled value={episode} />
+              { client && agent && instanceIdPresent && monitoring && !ended &&
+                  <button onClick={this.handleActEpisode}>Play Game</button> }
+            </div>
 
-          <div className="row">
-            <span>Game Over?</span>
-            <input type="text" disabled value={ended} />
-            { client && agent && instanceIdPresent && monitoring && ended &&
-                <button onClick={this.handleReset} style={{background: '#EE0000'}}>Reset</button> }
+            <div className="row">
+              <span>Game Over?</span>
+              <input type="text" disabled value={ended} />
+              { client && agent && instanceIdPresent && monitoring && ended &&
+                  <button onClick={this.handleReset} style={{background: '#EE0000'}}>Reset</button> }
+            </div>
           </div>
 
         </header>

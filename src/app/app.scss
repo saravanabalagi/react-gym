@@ -1,5 +1,5 @@
 .app {
-  text-align: center;
+
 }
 
 .app-header {
@@ -15,6 +15,7 @@
   .row {
 
     padding: 5px 10px;
+    height: 35px;
 
     > span {
       display: inline-block;
@@ -56,6 +57,8 @@
     background-color: #209cee;
     border-color: transparent;
     color: #fff;
+
+    width: 150px;
   }
 
 }
