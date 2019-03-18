@@ -8,7 +8,7 @@ Starter project for using OpenAI Gym in React
 
 ### Install Gym HTTP Server
 
-- You need [gym-http-server](https://github.com/saravanabalagi/gym-http-server), you can install with pip using:
+You need [gym-http-server](https://github.com/saravanabalagi/gym-http-server), you can install with pip using:
 
 ```sh
 pip install gym-http-server
@@ -16,7 +16,9 @@ gym-http-server
 ```
 This will start the Gym HTTP Server at `localhost:5000`.
 
-- Start the React Gym Client
+### Fire the React Client
+
+Clone and Start the React Gym Client
 
 ```sh
 git clone https://github.com/saravanabalagi/react-gym
