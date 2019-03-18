@@ -1,11 +1,16 @@
 {
-  "name": "neat_from_scratch",
-  "version": "0.1.0",
+  "name": "react-gym",
+  "version": "0.0.1",
   "private": true,
+  "author": "Saravanabalagi Ramachandran",
+  "license": "MIT",
   "dependencies": {
+    "@tensorflow/tfjs-node-gpu": "0.2.1",
+    "axios": "^0.18.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "node-sass": "^4.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
